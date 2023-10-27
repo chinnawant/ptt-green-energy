@@ -1,0 +1,115 @@
+# Default values for generic-deployment.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: ""
+  tag: ""
+  pullPolicy: Always
+
+imagePullSecrets:
+- nexus-registry-prd
+
+nameOverride: project_group-project_name-prd
+fullnameOverride: project_group-project_name-prd
+
+env:
+- name: NODE_ENV
+  value: production
+#   - name: DB_USERNAME
+#     secret:
+#       name: master-service-devops
+#       key: username
+
+#   - name: DB_PASSWORD
+#     secret:
+#       name: master-service-devops
+#       key: password
+
+# envFrom:
+#   - configmap:
+#       name:
+
+# configmap:
+#   enabled: true
+#   data:
+#   # key: value
+#     APP_URL: http://${HOST}:${PORT}
+#     HOST: 0.0.0.0
+#     PORT: "8080"
+#     foo: bar
+
+# volumeMounts:
+#   - name: master-service-devops-volume
+#     mountPath: /tmp/
+# volumes:
+#   - name: master-service-devops-volume
+#     persistentVolumeClaim:
+#       claimName: master-service-devops
+
+containerPorts:
+- 8080
+
+resources:
+  requests:
+    cpu: 500m
+    memory: 1000Mi
+  limits:
+    cpu: 500m
+    memory: 1000Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+service:
+  enabled: true
+  type: ClusterIP
+  annotation: {}
+  ports:
+  - name: project_group-project_name-prd-svc
+    protocol: TCP
+    externalPort: 80
+    internalPort: 8080
+
+route:
+  enabled: true
+  routes:
+  - name: main
+    spec:
+      host: project_group-project_name-prd.apps.ocpprd.pttdigital.com
+      to:
+        kind: Service
+        name: project_group-project_name-prd
+        weight: 100
+      port:
+        targetPort: project_group-project_name-prd-svc
+      wildcardPolicy: None
+      tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect
+
+healthCheck:
+  enabled: false
+  readinessProbe:
+    httpGet:
+      path: /ready
+      port: 80
+    initialDelaySeconds: 0
+    timeoutSeconds: 1
+    periodSeconds: 10
+    successThreshold: 1
+    failureThreshold: 3
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: 80
+    initialDelaySeconds: 0
+    timeoutSeconds: 1
+    periodSeconds: 10
+    successThreshold: 1
+    failureThreshold: 3
