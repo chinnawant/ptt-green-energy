@@ -29,7 +29,7 @@ def globalVariable(envName){
     env.build_cmd               = "" // build source code before scanning example. "dotnet build", "go build ./cmd/web"
     env.coverityID              = "cov-jenkins"
     env.blkduckID               = "blkduck-jenkins"
-    env.skip_stage              = [ "unit_test": true, "quality_analysis": false, "sca_black_duck": false, "sast_coverity": false, "image_scan_trivy": false, "dast_owasp_zap": false, "performance_test": false, "health_check_dev": false, "automate_test_dev": false, "health_check_sit": false, "automate_test_sit": false, "health_check_uat": false, "automate_test_uat": false, "health_check_prd": false]
+    env.skip_stage              = [ "unit_test": false, "quality_analysis": false, "sca_black_duck": false, "sast_coverity": false, "image_scan_trivy": false, "dast_owasp_zap": false, "performance_test": false, "health_check_dev": false, "automate_test_dev": false, "health_check_sit": false, "automate_test_sit": false, "health_check_uat": false, "automate_test_uat": false, "health_check_prd": false]
     env.image_regitry_server    = [ "acr": false, "nexus": true, "ecr": false, "gar": false, "gcr": false ]
 
     url_env_1 = "https://${project_group}-${project_name}-dev.apps.ocpdev.pttdigital.com"
@@ -41,8 +41,8 @@ def globalVariable(envName){
 
     //! Container Registry //
     //! NEXUS Non Prod SERVER //
-    nexus_non_prod_server_url = "https://nexus.pttdigital.com/"
-    nexus_non_prod_credentials = "nexus-pttdigital-jenkins-user"
+    nexus_non_prod_server_url = "pttnexus-nonprd-registry.pttdigital.com"
+    nexus_non_prod_credentials = "nexus-jenkins-user"
     //! End Non Prod NEXUS SERVER //
     //! NEXUS Prod SERVER //
     nexus_prod_server_url = "pttnexus-registry.pttdigital.com"
