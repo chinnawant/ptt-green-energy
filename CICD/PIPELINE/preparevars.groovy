@@ -42,7 +42,7 @@ def globalVariable(envName){
     //! Container Registry //
     //! NEXUS Non Prod SERVER //
     nexus_non_prod_server_url = "nexus-registry.pttdigital.com"
-    nexus_non_prod_credentials = "nexus-dgt-nonprod-user"
+    nexus_non_prod_credentials = "nexus-dgt-nonprd-user"
     //! End Non Prod NEXUS SERVER //
     //! NEXUS Prod SERVER //
     nexus_prod_server_url = "pttnexus-registry.pttdigital.com"
