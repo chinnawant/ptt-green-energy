@@ -10,7 +10,7 @@ image:
   pullPolicy: Always
 
 imagePullSecrets:
-- nexus-ptt-registry-non-prd
+- nexus-dgt-registry-non-prd
 
 nameOverride: do65003-smt-fe-gwe-web-dev
 fullnameOverride: do65003-smt-fe-gwe-web-dev
