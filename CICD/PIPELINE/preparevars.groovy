@@ -17,7 +17,7 @@ def globalVariable(envName){
     //! 3. git-repo.com/project_group/project_name
     //!     git_group_slug: project_group/
     //!     git_group_slug: project_name
-    env.git_group_slug      = "do65003-smt/"
+    env.git_group_slug      = "do66004-gwe/"
     env.git_project_slug    = "fe-gwe-web"
     // Change config //
 
