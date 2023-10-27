@@ -23,10 +23,10 @@ def globalVariable(envName){
 
     env.application_language    = [ "python": false, "nodejs": true, "golang": false, "dotnet_core": false, "java": false, "php": false, "dotnet_fw": false ]
     env.deploy_type             = [ "oc": true, "aks": false, "eks": false, "azure_function": false, "appservice_srccode": false, "appservice_container": false ] // aks , aws , azure_function, oc
-    env.unit_test_base_image    = "" // Base image for unit test
+    env.unit_test_base_image    = "node:16.18.1" // Base image for unit test
     env.automate_test           = [ "api_test" : false, "ui_test" : true ]
     env.allow_failure           = [ "trivy" : true, "sonarqube" : true, "blackduck" : true, "owasp_zap"  : true , "coverity" : true , "performance_test" : true, "api_test" : true, "ui_test" : true]
-    env.build_cmd               = "node:16.18.1-alpine3.17" // build source code before scanning example. "dotnet build", "go build ./cmd/web"
+    env.build_cmd               = "" // build source code before scanning example. "dotnet build", "go build ./cmd/web"
     env.coverityID              = "cov-jenkins"
     env.blkduckID               = "blkduck-jenkins"
     env.skip_stage              = [ "unit_test": false, "quality_analysis": false, "sca_black_duck": false, "sast_coverity": false, "image_scan_trivy": false, "dast_owasp_zap": false, "performance_test": false, "health_check_dev": false, "automate_test_dev": false, "health_check_sit": false, "automate_test_sit": false, "health_check_uat": false, "automate_test_uat": false, "health_check_prd": false]
