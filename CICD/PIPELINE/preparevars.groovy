@@ -1,6 +1,6 @@
 def globalVariable(envName){
     //! Change config //
-    env.project_group       = "do66004-gwe" //projectID
+    env.project_group       = "do65003-smt" //projectID
     env.project_name        = "fe-gwe-web" //serviceID
     env.project_version     = "1.0"
     
@@ -17,7 +17,7 @@ def globalVariable(envName){
     //! 3. git-repo.com/project_group/project_name
     //!     git_group_slug: project_group/
     //!     git_group_slug: project_name
-    env.git_group_slug      = "do66004-gwe/"
+    env.git_group_slug      = "do65003-smt/"
     env.git_project_slug    = "fe-gwe-web"
     // Change config //
 
@@ -34,17 +34,15 @@ def globalVariable(envName){
 
     url_env_1 = "https://${project_group}-${project_name}-dev.apps.ocpdev.pttdigital.com"
     url_env_2 = "https://${project_group}-${project_name}-sit.apps.ocpdev.pttdigital.com"
-    url_env_3 = "https://${project_group}-${project_name}-uat.apps.ocpdev.pttdigital.com"
     url_env_4 = "https://${project_group}-${project_name}-prd.apps.ocpprd.pttdigital.com"
     url_path_env_1 = "/" // edit # Path for health check dev
-    url_path_env_2 = "/" // edit # Path for health check sit
     url_path_env_3 = "/" // edit # Path for health check uat
     url_path_env_4 = "/" // edit # Path for health check prd
 
     //! Container Registry //
     //! NEXUS Non Prod SERVER //
-    nexus_non_prod_server_url = "pttnexus-nonprd-registry.pttdigital.com"
-    nexus_non_prod_credentials = "nexus-jenkins-user"
+    nexus_non_prod_server_url = "https://nexus.pttdigital.com/"
+    nexus_non_prod_credentials = "nexus-pttdigital-jenkins-user"
     //! End Non Prod NEXUS SERVER //
     //! NEXUS Prod SERVER //
     nexus_prod_server_url = "pttnexus-registry.pttdigital.com"
@@ -53,17 +51,14 @@ def globalVariable(envName){
     
     // Azure Config //
     //! Azure key vault Config // 
-    env.keyVault_url        = "https://kv-devsecops-prd-001.vault.azure.net/"
-    env.keyVault_credential = "vault-creds-for-jenkins-ptt"
+     env.keyVault_url        = "https://kv-pdsdevsecops-prd-001.vault.azure.net/"
+     env.keyVault_credential = "vault-creds-for-jenkins-dgt"
     //! End Azure key vault Config //
 
     //! OpenShift Config //
     // DEV
     oc_credentials_env_1 = "openshift-ptt-non-prd-creds"
     oc_service_name_env_1 = "https://api.ocpdev.pttdigital.com:6443"
-    // SIT
-    oc_credentials_env_2 = "openshift-ptt-non-prd-creds"
-    oc_service_name_env_2 = "https://api.ocpdev.pttdigital.com:6443"
     // UAT
     oc_credentials_env_3 = "openshift-ptt-non-prd-creds"
     oc_service_name_env_3 = "https://api.ocpdev.pttdigital.com:6443"
@@ -72,20 +67,17 @@ def globalVariable(envName){
     oc_service_name_env_4 = "https://api.ocpprd.pttdigital.com:6443"
     // Custom Namespace
     custom_namespace_env_1    = ""
-    custom_namespace_env_2    = ""
     custom_namespace_env_3    = ""
     custom_namespace_env_4    = ""
     //! End OpenShift Config //
 
     env.cicd_env_1 = "dev"
-    env.cicd_env_2 = "sit"
     env.cicd_env_3 = "uat"
     env.cicd_env_4 = "prd"
 
     switch (env.BRANCH_NAME) {
 
         case "develop":
-        case "hotfix":
             switch (envName) {
                 case cicd_env_1 :
                     env.envName = cicd_env_1
@@ -101,21 +93,8 @@ def globalVariable(envName){
                     env.url_path                  = url_path_env_1
                     env.custom_namespace          = custom_namespace_env_1
                     break
-                case cicd_env_2:
-                    env.envName                   = cicd_env_2
-                    // OC
-                    env.oc_credentials            = oc_credentials_env_2
-                    env.oc_service_name           = oc_service_name_env_2
-                    // IMAGE
-                    env.image_repo_server         = nexus_non_prod_server_url
-                    env.image_credentials         = nexus_non_prod_credentials
-                    env.image_name                = "${env.image_repo_server}/${project_group}-${project_name}"
-                    // APP
-                    env.url_application           = url_env_2
-                    env.url_path                  = url_path_env_2
-                    env.custom_namespace          = custom_namespace_env_2
-                    break
             }
+            break
         case "hotfix":
         case "hotfix-deploy":
         case "master":
@@ -153,14 +132,15 @@ def globalVariable(envName){
                     env.custom_namespace          = custom_namespace_env_4
                     break
             }
+            break
     }
 }
 
 def clonePipelineVariable(){
     //! helm config //
-    env.helmRepoCred            = "gitlab-ptt-user-jenkins-sci"
-    env.helmRepoUrl             = "https://pttgit.pttdigital.com/devops/helm-charts-release.git"
-    env.helmRepoBranch          = "master"
+    env.helmRepoCred            = "git-dgt-user"
+    env.helmRepoUrl             = "https://git-dgt.pttdigital.com/devops/helm-charts-release/helm-chart-template.git"
+    env.helmRepoBranch          = "main"
     env.helmWaitTimeout         = "5m0s"
     env.helmChartName           = "simple-generic-app-helm3"
     env.helmRelativeTargetDir   = "helm-chart"
