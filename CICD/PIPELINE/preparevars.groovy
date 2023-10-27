@@ -1,7 +1,7 @@
 def globalVariable(envName){
     //! Change config //
-    env.project_group       = "project_group" //projectID
-    env.project_name        = "project_name" //serviceID
+    env.project_group       = "do66004-gwe" //projectID
+    env.project_name        = "fe-gwe-web" //serviceID
     env.project_version     = "1.0"
     
     //! Git repository slug URL.
@@ -17,25 +17,25 @@ def globalVariable(envName){
     //! 3. git-repo.com/project_group/project_name
     //!     git_group_slug: project_group/
     //!     git_group_slug: project_name
-    env.git_group_slug      = ""
-    env.git_project_slug    = ""
+    env.git_group_slug      = "do66004-gwe/"
+    env.git_project_slug    = "fe-gwe-web"
     // Change config //
 
-    env.application_language    = [ "python": false, "nodejs": false, "golang": false, "dotnet_core": false, "java": false, "php": false, "dotnet_fw": false ]
+    env.application_language    = [ "python": false, "nodejs": true, "golang": false, "dotnet_core": false, "java": false, "php": false, "dotnet_fw": false ]
     env.deploy_type             = [ "oc": true, "aks": false, "eks": false, "azure_function": false, "appservice_srccode": false, "appservice_container": false ] // aks , aws , azure_function, oc
     env.unit_test_base_image    = "" // Base image for unit test
-    env.automate_test           = [ "api_test" : true, "ui_test" : true ]
-    env.allow_failure           = [ "trivy" : false, "sonarqube" : false, "blackduck" : false, "owasp_zap"  : false , "coverity" : false , "performance_test" : false, "api_test" : false, "ui_test" : false]
-    env.build_cmd               = "" // build source code before scanning example. "dotnet build", "go build ./cmd/web"
-    env.coverityID              = "" //"cov-user0"
-    env.blkduckID               = "" //"blkduck-user0"
+    env.automate_test           = [ "api_test" : false, "ui_test" : true ]
+    env.allow_failure           = [ "trivy" : true, "sonarqube" : true, "blackduck" : true, "owasp_zap"  : true , "coverity" : true , "performance_test" : true, "api_test" : true, "ui_test" : true]
+    env.build_cmd               = "node:16.18.1-alpine3.17" // build source code before scanning example. "dotnet build", "go build ./cmd/web"
+    env.coverityID              = "cov-jenkins"
+    env.blkduckID               = "blkduck-jenkins"
     env.skip_stage              = [ "unit_test": false, "quality_analysis": false, "sca_black_duck": false, "sast_coverity": false, "image_scan_trivy": false, "dast_owasp_zap": false, "performance_test": false, "health_check_dev": false, "automate_test_dev": false, "health_check_sit": false, "automate_test_sit": false, "health_check_uat": false, "automate_test_uat": false, "health_check_prd": false]
     env.image_regitry_server    = [ "acr": false, "nexus": true, "ecr": false, "gar": false, "gcr": false ]
 
-    url_env_1 = ""
-    url_env_2 = ""
-    url_env_3 = ""
-    url_env_4 = ""
+    url_env_1 = "https://${project_group}-${project_name}-dev.apps.ocpdev.pttdigital.com"
+    url_env_2 = "https://${project_group}-${project_name}-sit.apps.ocpdev.pttdigital.com"
+    url_env_3 = "https://${project_group}-${project_name}-uat.apps.ocpdev.pttdigital.com"
+    url_env_4 = "https://${project_group}-${project_name}-prd.apps.ocpprd.pttdigital.com"
     url_path_env_1 = "/" // edit # Path for health check dev
     url_path_env_2 = "/" // edit # Path for health check sit
     url_path_env_3 = "/" // edit # Path for health check uat

@@ -12,8 +12,8 @@ image:
 imagePullSecrets:
 - nexus-ptt-registry-non-prd
 
-nameOverride: project_group-project_name-dev
-fullnameOverride: project_group-project_name-dev
+nameOverride: do66004-gwe-fe-gwe-web-dev
+fullnameOverride: do66004-gwe-fe-gwe-web-dev
 
 env:
 - name: NODE_ENV
@@ -69,7 +69,7 @@ service:
   type: ClusterIP
   annotation: {}
   ports:
-  - name: project_group-project_name-dev-svc
+  - name: do66004-gwe-fe-gwe-web-dev-svc
     protocol: TCP
     externalPort: 80
     internalPort: 8080
@@ -79,13 +79,13 @@ route:
   routes:
   - name: main
     spec:
-      host: project_group-project_name-dev.apps.ocpdev.pttdigital.com
+      host: do66004-gwe-fe-gwe-web-dev.apps.ocpdev.pttdigital.com
       to:
         kind: Service
-        name: project_group-project_name-dev
+        name: do66004-gwe-fe-gwe-web-dev
         weight: 100
       port:
-        targetPort: project_group-project_name-dev-svc
+        targetPort: do66004-gwe-fe-gwe-web-dev-svc
       wildcardPolicy: None
       tls:
         termination: edge
