@@ -42,11 +42,11 @@ def globalVariable(envName){
     //! Container Registry //
     //! NEXUS Non Prod SERVER //
     nexus_non_prod_server_url = "nexus-registry.pttdigital.com"
-    nexus_non_prod_credentials = "nexus-dgt-nonprd-user"
+    nexus_non_prod_credentials = "nexus-dgt-nonprod-user"
     //! End Non Prod NEXUS SERVER //
     //! NEXUS Prod SERVER //
     nexus_prod_server_url = "pttnexus-registry.pttdigital.com"
-    nexus_prod_credentials = "ptt-nexus-jenkins-user"
+    nexus_prod_credentials = "nexus-dgt-prd-user"
     //! End Prod NEXUS SERVER //
     
     // Azure Config //
