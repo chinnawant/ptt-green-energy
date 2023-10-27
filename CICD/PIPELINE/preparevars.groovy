@@ -41,12 +41,12 @@ def globalVariable(envName){
 
     //! Container Registry //
     //! NEXUS Non Prod SERVER //
-    nexus_non_prod_server_url = "https://nexus.pttdigital.com/"
-    nexus_non_prod_credentials = "nexus-pttdigital-jenkins-user"
+    nexus_non_prod_server_url = "nexus-registry.pttdigital.com"
+    nexus_non_prod_credentials = "nexus-dgt-nonprod-user"
     //! End Non Prod NEXUS SERVER //
     //! NEXUS Prod SERVER //
     nexus_prod_server_url = "pttnexus-registry.pttdigital.com"
-    nexus_prod_credentials = "ptt-nexus-jenkins-user"
+    nexus_prod_credentials = "nexus-dgt-prd-user"
     //! End Prod NEXUS SERVER //
     
     // Azure Config //
@@ -94,7 +94,6 @@ def globalVariable(envName){
                     env.custom_namespace          = custom_namespace_env_1
                     break
             }
-            break
         case "hotfix":
         case "hotfix-deploy":
         case "master":
@@ -132,7 +131,6 @@ def globalVariable(envName){
                     env.custom_namespace          = custom_namespace_env_4
                     break
             }
-            break
     }
 }
 
