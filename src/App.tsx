@@ -8,9 +8,9 @@ import Banner from "./components/banner";
 import ControlPanel from "./components/controlPanel";
 
 // Assets
-import ImgLogo from './assets/images/logo.png';
+// import ImgLogo from './assets/images/logo.png';
 import ImagfinancialReporting from './assets/images/financial-reporting.jpg';
-import ImgFinancial from './assets/images/financial-statement.jpg';
+// import ImgFinancial from './assets/images/financial-statement.jpg';
 
 // future import it to dynamic
 import P2565 from './assets/pdfs/2565.pdf';
@@ -43,13 +43,13 @@ function App() {
   return (
     <>
       <Box height={'100dvh'}  >
-        <Header  image={ImgLogo} companyName="PTT Green Energy Pte. Ltd. " ></Header>
+        {/* <Header  image={ImgLogo} companyName="PTT Green Energy Pte. Ltd. " ></Header> */}
         <Banner image={ImagfinancialReporting}/>
         <Container>
           <Box display={"flex"} justifyContent={"center"} padding={"24px"}>
             <TextSection>งบการเงินล่าสุด</TextSection>
           </Box>
-          <ControlPanel image={ImgFinancial} year={year} presentYear={StorePdf['P2565']}  pdf={pdf} handleChange={setYear} years={storeData} />
+          {/* <ControlPanel image={ImgFinancial} year={year} presentYear={StorePdf['P2565']}  pdf={pdf} handleChange={setYear} years={storeData} /> */}
         </Container>
       </Box>
     </>
