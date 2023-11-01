@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { Box, FormControl, Button, Select, MenuItem } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import imageDownload from '../assets/images/download.svg'
-// import imageChartup from '../assets/images/chartup2.png'
+import imageChartup from '../assets/images/chartup2.png'
 import { useTheme } from '@mui/material/styles';
 
       
@@ -104,7 +104,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, y
           <Box style={{display:"flex",justifyContent:"center",flexDirection:"column",height:"100%",alignItems:"center"}}>
             <Box>
               <Box width={"30px"} height={"30px"} sx={{...matchesSM && { display: "none" }}}>
-                {/* <ImageDownload src={imageChartup}  /> */}
+                <ImageDownload src={imageChartup}  />
               </Box>
             <Box padding={"10px 0 10px 0"} fontSize={"1.4rem"} sx={{...matchesMD && { fontSize: "1.8rem"}}}  color={"white"}>งบการเงินประจำปี 2565</Box>
               <Box><Button style={{width:"150px",background:"#2FC0F7",display:"flex",justifyContent:"space-between"}} variant="contained"  size={"small"} href={presentYear} target='_blank'>ดาวโหลด PDF
@@ -141,7 +141,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, y
         <Box paddingLeft={"10px"}>
           <Button variant="contained" style={{width:"150px",background:"#2FC0F7",display:"flex",justifyContent:"space-between"}} size={"small"} href={pdf} target='_blank'>ดาวโหลด PDF
             <Box width={"15px"} height={"15px"}>
-              <ImageDownload src={imageDownload}  />
+              <ImageDownload src={imageDownload as string}  />
             </Box>
           </Button>
         </Box>

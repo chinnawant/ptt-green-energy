@@ -41,8 +41,8 @@ export default {
     setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
     maxWorkers: '50%',
     moduleNameMapper: {
-        "\\.(css|less|scss|sass|svg|pdf)$": "identity-obj-proxy",
-        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__test__/mocks/file-transform.ts"
+        "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+        "\\.(svg|pdf|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__test__/mocks/file-transform.ts"
 
 },
 }

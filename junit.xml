@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="1" errors="0" time="38.339">
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2023-11-01T00:20:00" time="37.64" tests="1">
-    <testcase classname=" renders learn react link" name=" renders learn react link" time="0.094">
+<testsuites name="jest tests" tests="1" failures="1" errors="0" time="7.823">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2023-11-01T04:41:05" time="6.883" tests="1">
+    <testcase classname=" renders learn react link" name=" renders learn react link" time="0.189">
       <failure>TestingLibraryElementError: Unable to find an element with the text: /learn react/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
 Ignored nodes: comments, script, style
@@ -10,6 +10,21 @@ Ignored nodes: comments, script, style
     &lt;div
       class=&quot;MuiBox-root css-171gdgz&quot;
     &gt;
+      &lt;div
+        class=&quot;css-1t86cwu&quot;
+      &gt;
+        &lt;img
+          class=&quot;css-1qembng&quot;
+          height=&quot;60&quot;
+          src=&quot;&quot;
+          width=&quot;60&quot;
+        /&gt;
+        &lt;h1
+          class=&quot;css-zp72u1&quot;
+        &gt;
+          PTT Green Energy Pte. Ltd. 
+        &lt;/h1&gt;
+      &lt;/div&gt;
       &lt;div
         class=&quot;css-1sd4086&quot;
       &gt;
@@ -29,6 +44,157 @@ Ignored nodes: comments, script, style
             class=&quot;css-cp1xhs&quot;
           &gt;
             งบการเงินล่าสุด
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;css-169yxjx&quot;
+        &gt;
+          &lt;div
+            class=&quot;css-nmgf58&quot;
+          &gt;
+            &lt;div
+              class=&quot;css-n7lhkf&quot;
+            /&gt;
+            &lt;div
+              class=&quot;css-dnl2k5&quot;
+              style=&quot;background-size: 21% 100%, 21% 100%, 59% 100%; background-repeat: no-repeat;&quot;
+            &gt;
+              &lt;div
+                class=&quot;MuiBox-root css-0&quot;
+                style=&quot;display: flex; justify-content: center; flex-direction: column; height: 100%; align-items: center;&quot;
+              &gt;
+                &lt;div
+                  class=&quot;MuiBox-root css-0&quot;
+                &gt;
+                  &lt;div
+                    class=&quot;MuiBox-root css-c2uxn6&quot;
+                  &gt;
+                    &lt;img
+                      class=&quot;css-s08p0c&quot;
+                      src=&quot;&quot;
+                    /&gt;
+                  &lt;/div&gt;
+                  &lt;div
+                    class=&quot;MuiBox-root css-1lrcp8v&quot;
+                  &gt;
+                    งบการเงินประจำปี 2565
+                  &lt;/div&gt;
+                  &lt;div
+                    class=&quot;MuiBox-root css-0&quot;
+                  &gt;
+                    &lt;button
+                      class=&quot;MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-11qr2p8-MuiButtonBase-root-MuiButton-root&quot;
+                      href=&quot;&quot;
+                      style=&quot;width: 150px; background: rgb(47, 192, 247); display: flex; justify-content: space-between;&quot;
+                      tabindex=&quot;0&quot;
+                      target=&quot;_blank&quot;
+                      type=&quot;button&quot;
+                    &gt;
+                      ดาวโหลด PDF
+                      &lt;div
+                        class=&quot;MuiBox-root css-1t9pz9x&quot;
+                      &gt;
+                        &lt;img
+                          class=&quot;css-s08p0c&quot;
+                          src=&quot;&quot;
+                        /&gt;
+                      &lt;/div&gt;
+                      &lt;span
+                        class=&quot;MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root&quot;
+                      /&gt;
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;MuiBox-root css-1oyz0tl&quot;
+          &gt;
+            &lt;div
+              class=&quot;MuiBox-root css-tic8xi&quot;
+            &gt;
+                ปี : 
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;MuiBox-root css-m6sx0v&quot;
+            &gt;
+              &lt;div
+                class=&quot;MuiFormControl-root css-1nrlq1o-MuiFormControl-root&quot;
+              &gt;
+                &lt;div
+                  class=&quot;MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-36xnk5-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root&quot;
+                &gt;
+                  &lt;div
+                    aria-controls=&quot;:r0:&quot;
+                    aria-expanded=&quot;false&quot;
+                    aria-haspopup=&quot;listbox&quot;
+                    class=&quot;MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input&quot;
+                    role=&quot;combobox&quot;
+                    tabindex=&quot;0&quot;
+                  &gt;
+                    2565
+                  &lt;/div&gt;
+                  &lt;input
+                    aria-hidden=&quot;true&quot;
+                    aria-invalid=&quot;false&quot;
+                    class=&quot;MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput&quot;
+                    tabindex=&quot;-1&quot;
+                    value=&quot;2565&quot;
+                  /&gt;
+                  &lt;svg
+                    aria-hidden=&quot;true&quot;
+                    class=&quot;MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon&quot;
+                    data-testid=&quot;ArrowDropDownIcon&quot;
+                    focusable=&quot;false&quot;
+                    viewBox=&quot;0 0 24 24&quot;
+                  &gt;
+                    &lt;path
+                      d=&quot;M7 10l5 5 5-5z&quot;
+                    /&gt;
+                  &lt;/svg&gt;
+                  &lt;fieldset
+                    aria-hidden=&quot;true&quot;
+                    class=&quot;MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline&quot;
+                  &gt;
+                    &lt;legend
+                      class=&quot;css-ihdtdm&quot;
+                    &gt;
+                      &lt;span
+                        class=&quot;notranslate&quot;
+                      &gt;
+                        ​
+                      &lt;/span&gt;
+                    &lt;/legend&gt;
+                  &lt;/fieldset&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;MuiBox-root css-m6sx0v&quot;
+            &gt;
+              &lt;button
+                class=&quot;MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-11qr2p8-MuiButtonBase-root-MuiButton-root&quot;
+                href=&quot;&quot;
+                style=&quot;width: 150px; background: rgb(47, 192, 247); display: flex; justify-content: space-between;&quot;
+                tabindex=&quot;0&quot;
+                target=&quot;_blank&quot;
+                type=&quot;button&quot;
+              &gt;
+                ดาวโหลด PDF
+                &lt;div
+                  class=&quot;MuiBox-root css-1fjwirh&quot;
+                &gt;
+                  &lt;img
+                    class=&quot;css-s08p0c&quot;
+                    src=&quot;&quot;
+                  /&gt;
+                &lt;/div&gt;
+                &lt;span
+                  class=&quot;MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root&quot;
+                /&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
