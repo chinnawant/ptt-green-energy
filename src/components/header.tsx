@@ -5,8 +5,8 @@ import styled from '@emotion/styled'
 interface Props {
   width?: number;
   height?: number;
-  image: string;
-  companyName: string;
+  image?: string;
+  companyName?: string;
 }
 
 const HeaderContainer = styled.div`
@@ -36,7 +36,7 @@ const LogoImage = styled.img`
 
 
 
-const Header: React.FC<Props> = ({ width = 60, height = 60, image, companyName }) => {
+const Header: React.FC<Props> = ({ width = 60, height = 60, image = '', companyName = '' }) => {
   return (
     <HeaderContainer>
         <LogoImage src={image} width={width} height={height} />
