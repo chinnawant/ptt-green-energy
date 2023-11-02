@@ -1,6 +1,6 @@
 def globalVariable(envName){
     //! Change config //
-    env.project_group       = "do66004-gwe" //projectID
+    env.project_group       = "do65003-smt" //projectID
     env.project_name        = "fe-gwe-web" //serviceID
     env.project_version     = "1.0"
     
