@@ -17,7 +17,7 @@ describe('DownloadButton', () => {
 
     
     expect(screen.getByRole('link')).toBeInTheDocument();
-    expect(container.querySelector(defaultProps1.id)).toBeInTheDocument();
+    expect(container.querySelector(`#${defaultProps1.id}`)).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveAttribute('href', defaultProps1.href);
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
 
@@ -39,7 +39,7 @@ describe('DownloadButton', () => {
 
     expect(screen.getByRole('link')).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveTextContent('ดาวโหลด PDF');
-    expect(container.querySelector(defaultProps2.id)).toBeInTheDocument();
+    expect(container.querySelector(`#${defaultProps2.id}`)).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveAttribute('href', defaultProps2.href);
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
 
