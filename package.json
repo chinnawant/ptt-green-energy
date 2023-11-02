@@ -32,7 +32,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest -u --ci --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "robot": "cd CICD/TEST/User_Interface && python -m robot  --outputdir ./out ./"
   },
   "eslintConfig": {
     "extends": [
