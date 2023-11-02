@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
-import BannerContainer from '../components/banner';
+import BannerContainer from '../../components/banner';
 
 describe('BannerContainer', () => {
-  it('should render with the correct image and two divs', () => {
+  it('renders correctly with props', () => {
     const image = 'testImage.jpg';
     const { container }  = render(<BannerContainer image={image} />);
     const divs = container.querySelectorAll('div');
@@ -13,6 +13,7 @@ describe('BannerContainer', () => {
     expect(banner).toHaveStyle(`background-image: url(${image})`);
     divs.forEach((div) => { expect(div).toBeInTheDocument(); });
   });
-
- 
+  
+  
+  
 });

@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="51.108">
-  <testsuite name="Header" errors="0" failures="0" skipped="0" timestamp="2023-11-01T07:53:09" time="36.94" tests="3">
-    <testcase classname="Header renders with correct props" name="Header renders with correct props" time="0.064">
-    </testcase>
-    <testcase classname="Header renders with default props" name="Header renders with default props" time="0.006">
-    </testcase>
-    <testcase classname="Header renders with custom width and height" name="Header renders with custom width and height" time="0.009">
+<testsuites name="jest tests" tests="10" failures="0" errors="0" time="58.843">
+  <testsuite name="BannerContainer" errors="0" failures="0" skipped="0" timestamp="2023-11-02T02:33:56" time="26.294" tests="1">
+    <testcase classname="BannerContainer renders correctly with props" name="BannerContainer renders correctly with props" time="0.154">
     </testcase>
   </testsuite>
-  <testsuite name="BannerContainer" errors="0" failures="0" skipped="0" timestamp="2023-11-01T07:53:09" time="36.955" tests="1">
-    <testcase classname="BannerContainer should render with the correct image and two divs" name="BannerContainer should render with the correct image and two divs" time="0.09">
+  <testsuite name="&lt;Header&gt; Component" errors="0" failures="0" skipped="0" timestamp="2023-11-02T02:34:22" time="0.977" tests="2">
+    <testcase classname="&lt;Header&gt; Component renders not inject props" name="&lt;Header&gt; Component renders not inject props" time="0.074">
+    </testcase>
+    <testcase classname="&lt;Header&gt; Component should render inject props" name="&lt;Header&gt; Component should render inject props" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="App component" errors="0" failures="0" skipped="0" timestamp="2023-11-02T02:33:56" time="47.805" tests="1">
+    <testcase classname="App component renders App component without crashing" name="App component renders App component without crashing" time="0.254">
+    </testcase>
+  </testsuite>
+  <testsuite name="DownloadButton" errors="0" failures="0" skipped="0" timestamp="2023-11-02T02:33:56" time="47.897" tests="3">
+    <testcase classname="DownloadButton renders correctly with props input1" name="DownloadButton renders correctly with props input1" time="0.222">
+    </testcase>
+    <testcase classname="DownloadButton renders correctly with props input2" name="DownloadButton renders correctly with props input2" time="0.078">
+    </testcase>
+    <testcase classname="DownloadButton handles click event" name="DownloadButton handles click event" time="0.065">
+    </testcase>
+  </testsuite>
+  <testsuite name="ControlPanel" errors="0" failures="0" skipped="0" timestamp="2023-11-02T02:33:56" time="48.161" tests="3">
+    <testcase classname="ControlPanel renders correctly with props input1" name="ControlPanel renders correctly with props input1" time="0.329">
+    </testcase>
+    <testcase classname="ControlPanel renders correctly with props input2" name="ControlPanel renders correctly with props input2" time="0.084">
+    </testcase>
+    <testcase classname="ControlPanel handles interactive select" name="ControlPanel handles interactive select" time="0.202">
     </testcase>
   </testsuite>
 </testsuites>

@@ -40,7 +40,7 @@ const BannerContent = styled.div`
 `;
 
 
-const Banner: React.FC<BannerProps> = ({ image }) => {
+const Banner: React.FC<BannerProps> = ({ image = '' }) => {
   return (
     <BannerContainer image={image}>
       <BannerContent> </BannerContent>

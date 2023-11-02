@@ -1,27 +1,18 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Header from '../components/header';
+import Header from '../../components/header';
 
-describe('Header', () => {
-  it('renders with correct props', () => {
-    const mockImage = 'test-image.jpg';
-    const mockCompanyName = 'PTT Green Energy';
-    const { container } = render(<Header image={mockImage} companyName={mockCompanyName} />);
+describe('<Header> Component', () => {
 
-    expect(screen.getByText(mockCompanyName)).toBeInTheDocument();
-    expect(container.querySelector('img')).toHaveAttribute('src', mockImage);
-  });
-
-  it('renders with default props', () => {
+  it('renders not inject props', () => {
     const { container } = render(<Header />);
-
     expect(screen.queryByText('PTT Green Energy')).not.toBeInTheDocument();
     expect(container.querySelector('img')).toHaveAttribute('src', '');
   });
 
 
 
-  it('renders with custom width and height', () => {
+  it('should render inject props', () => {
     const mockImage = 'test-image.jpg';
     const mockCompanyName = 'PTT Green Energy';
     const mockWidth = 100;

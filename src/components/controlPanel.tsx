@@ -1,21 +1,22 @@
 
 import React from 'react';
 import styled from '@emotion/styled'
-import { Box, FormControl, Button, Select, MenuItem } from "@mui/material";
+import { Box, FormControl, Select, MenuItem } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import imageDownload from '../assets/images/download.svg'
+import DownloadButton from './downloadButton'
 import imageChartup from '../assets/images/chartup2.png'
 import { useTheme } from '@mui/material/styles';
 
       
 
 type ControlPanelProps = {
-  image?: string;
-  handleChange?: any
-  year?: string;
-  years? : string[];
-  pdf?: any;
-  presentYear?: any;
+  image: string;
+  handleChange: any
+  defalutValue: string;
+  dropdown : string[];
+  presentYear: string;
+  selectedPDF: any;
 };
 
 
@@ -81,7 +82,7 @@ background-repeat: no-repeat;
 `
 
 
-const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, year, years= [], pdf, presentYear }) => {
+const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, defalutValue, dropdown= [], selectedPDF, presentYear  }) => {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesMD = useMediaQuery(theme.breakpoints.up('md'));
@@ -95,23 +96,19 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, y
     <ControlPanelContainer> 
 
       <ControlPanelFrame >
-        <BoxImages image={image}/>
+        <BoxImages  image={image}/>
         <BoxContrlller  
           style={{backgroundImage:"linear-gradient(to top left, #257CB2 0 50%, transparent 50% 100%), linear-gradient(to top right, #257CB2 0 100%, transparent 50% 100%), linear-gradient(#257CB2 0 100%)",backgroundSize:"21% 100%, 21% 100%, 59% 100%",backgroundPosition:"left top, right top, center top",backgroundRepeat: "no-repeat"}}  
-
         >
         
           <Box style={{display:"flex",justifyContent:"center",flexDirection:"column",height:"100%",alignItems:"center"}}>
             <Box>
               <Box width={"30px"} height={"30px"} sx={{...matchesSM && { display: "none" }}}>
-                <ImageDownload src={imageChartup}  />
+                <ImageDownload  src={imageChartup}  />
               </Box>
             <Box padding={"10px 0 10px 0"} fontSize={"1.4rem"} sx={{...matchesMD && { fontSize: "1.8rem"}}}  color={"white"}>งบการเงินประจำปี 2565</Box>
-              <Box><Button style={{width:"150px",background:"#2FC0F7",display:"flex",justifyContent:"space-between"}} variant="contained"  size={"small"} href={presentYear} target='_blank'>ดาวโหลด PDF
-                <Box width={"20px"} height={"20px"}>
-                  <ImageDownload src={imageDownload}  />
-                </Box>
-                </Button></Box>
+                <DownloadButton href={presentYear} imageDownload={imageDownload} />
+                
             </Box>
           </Box>
         </BoxContrlller>
@@ -122,7 +119,8 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, y
         <Box paddingLeft={"10px"}>
             <FormControl >
               <Select 
-                value={year}
+                data-testid="country"
+                value={defalutValue}
                 onChange={(event) => handleChange(event.target.value)}
                 sx={{
                   width: 100,
@@ -131,7 +129,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, y
                 }}
               >
                 {
-                  years.map((year: string,index: number) => {
+                  dropdown.map((year: string,index: number) => {
                     return <MenuItem  key={index} value={year}>{year}</MenuItem>
                   }) 
                 }
@@ -139,11 +137,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, y
           </FormControl>
         </Box>
         <Box paddingLeft={"10px"}>
-          <Button variant="contained" style={{width:"150px",background:"#2FC0F7",display:"flex",justifyContent:"space-between"}} size={"small"} href={pdf} target='_blank'>ดาวโหลด PDF
-            <Box width={"15px"} height={"15px"}>
-              <ImageDownload src={imageDownload as string}  />
-            </Box>
-          </Button>
+          <DownloadButton href={selectedPDF} imageDownload={imageDownload} />
         </Box>
           
       </Box>
