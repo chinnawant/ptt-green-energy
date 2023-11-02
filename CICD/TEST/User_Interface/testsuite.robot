@@ -126,7 +126,7 @@ Open Website in Size
     Call Method    ${chrome_options}    add_argument    --no-sandbox
     Call Method    ${chrome_options}    add_argument    --headless
     Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
-    Open Browser    ${PROTOCOL}://${HOSTNAME}${PATH}    ${browser}   
+    Open Browser    ${PROTOCOL}://${HOSTNAME}${PATH}    ${browser}  options=${chrome_options} 
     Set Window Size    ${w}    ${h}
 
 

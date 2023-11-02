@@ -2,5 +2,5 @@
 *** Variables ***
 ${browser}              chrome
 ${PATH}                 /
-${PROTOCOL}            
-${HOSTNAME}            
+${PROTOCOL}             http
+${HOSTNAME}             localhost:3000
