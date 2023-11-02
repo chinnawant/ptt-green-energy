@@ -11,13 +11,16 @@ const ImageDownload = styled.img`
 interface DownloadButtonProps {
   href: string;
   imageDownload: string;
+  id?: string,
   onClick?: Function;
 }
 
-const DownloadButton: FC<DownloadButtonProps> = ({ href = '', imageDownload = '', onClick }) => {
+const DownloadButton: FC<DownloadButtonProps> = ({ href = '', imageDownload = '', id = "",onClick }) => {
+  const _id = id ? id : Math.random().toString(36).substring(4);;
   return (
     <Box>
       <Button 
+        id={_id}
         variant="contained" 
         style={{width:"150px",background:"#2FC0F7",display:"flex",justifyContent:"space-between"}} 
         size={"small"} 

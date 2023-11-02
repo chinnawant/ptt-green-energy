@@ -107,7 +107,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, d
                 <ImageDownload  src={imageChartup}  />
               </Box>
             <Box padding={"10px 0 10px 0"} fontSize={"1.4rem"} sx={{...matchesMD && { fontSize: "1.8rem"}}}  color={"white"}>งบการเงินประจำปี 2565</Box>
-                <DownloadButton href={presentYear} imageDownload={imageDownload} />
+                <DownloadButton id="pdfPresentYear" href={presentYear} imageDownload={imageDownload} />
                 
             </Box>
           </Box>
@@ -119,7 +119,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, d
         <Box paddingLeft={"10px"}>
             <FormControl >
               <Select 
-                data-testid="country"
+                id='select-year'
                 value={defalutValue}
                 onChange={(event) => handleChange(event.target.value)}
                 sx={{
@@ -130,14 +130,14 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, d
               >
                 {
                   dropdown.map((year: string,index: number) => {
-                    return <MenuItem  key={index} value={year}>{year}</MenuItem>
+                    return <MenuItem id={'select-year-option-'+year+''} key={index} value={year}>{year}</MenuItem>
                   }) 
                 }
               </Select>
           </FormControl>
         </Box>
         <Box paddingLeft={"10px"}>
-          <DownloadButton href={selectedPDF} imageDownload={imageDownload} />
+          <DownloadButton  id="pdfSelected" href={selectedPDF} imageDownload={imageDownload} />
         </Box>
           
       </Box>
