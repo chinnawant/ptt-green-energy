@@ -5,17 +5,19 @@ describe('DownloadButton', () => {
   const defaultProps1 = {
     href: 'https://example.com',
     imageDownload: 'https://example.com/image.png',
+    id: 'xxx',
   };
 
 
   it('renders correctly with props input1', () => {
-    const { getByText } = render(<DownloadButton {...defaultProps1} />);
+    const { getByText, container } = render(<DownloadButton {...defaultProps1} />);
 
     expect(screen.getByRole('img')).toBeInTheDocument();
     expect(screen.getByRole('img')).toHaveAttribute('src', defaultProps1.imageDownload);
 
-
+    
     expect(screen.getByRole('link')).toBeInTheDocument();
+    expect(container.querySelector(defaultProps1.id)).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveAttribute('href', defaultProps1.href);
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
 
@@ -27,8 +29,9 @@ describe('DownloadButton', () => {
       const defaultProps2 = {
     href: 'https://google.com',
     imageDownload: 'https://google.com/image.png',
+    id: 'yyy',
   };
-    const { getByText } = render(<DownloadButton {...defaultProps2} />);
+    const { getByText, container } = render(<DownloadButton {...defaultProps2} />);
 
     expect(screen.getByRole('img')).toBeInTheDocument();
     expect(screen.getByRole('img')).toHaveAttribute('src', defaultProps2.imageDownload);
@@ -36,6 +39,7 @@ describe('DownloadButton', () => {
 
     expect(screen.getByRole('link')).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveTextContent('ดาวโหลด PDF');
+    expect(container.querySelector(defaultProps2.id)).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveAttribute('href', defaultProps2.href);
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
 

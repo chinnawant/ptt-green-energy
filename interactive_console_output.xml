@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.0 on win32)" generated="20231102 15:41:35.068" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.9.0 on win32)" generated="20231102 21:51:53.123" rpa="false" schemaversion="4">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\Chinnawat.P\.vscode-insiders\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
-<status status="PASS" starttime="20231102 15:41:35.085" endtime="20231102 15:41:39.216"/>
+<kw name="Open Website in Size">
+<arg>375</arg>
+<arg>812</arg>
+<msg timestamp="20231102 21:51:53.623" level="FAIL">No keyword with name 'Open Website in Size' found.</msg>
+<status status="FAIL" starttime="20231102 21:51:53.621" endtime="20231102 21:51:53.623"/>
 </kw>
-<status status="PASS" starttime="20231102 15:41:35.085" endtime="20231102 15:41:39.217"/>
+<kw name="Verify Element Text">
+<arg>root&gt;div&gt;div&gt;div&gt;div</arg>
+<arg>งบการเงินล่าสุด</arg>
+<status status="NOT RUN" starttime="20231102 21:51:53.624" endtime="20231102 21:51:53.624"/>
+</kw>
+<kw name="Verify Element Text">
+<arg>root&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div:nth-child(2)</arg>
+<arg>งบการเงินประจำปี 2565</arg>
+<status status="NOT RUN" starttime="20231102 21:51:53.626" endtime="20231102 21:51:53.626"/>
+</kw>
+<kw name="Check New Tab Has PDF">
+<arg>pdfPresentYear</arg>
+<status status="NOT RUN" starttime="20231102 21:51:53.629" endtime="20231102 21:51:53.629"/>
+</kw>
+<kw name="Capture Page Screenshot">
+<status status="NOT RUN" starttime="20231102 21:51:53.629" endtime="20231102 21:51:53.631"/>
+</kw>
+<kw name="Close Window">
+<status status="NOT RUN" starttime="20231102 21:51:53.632" endtime="20231102 21:51:53.632"/>
+</kw>
+<status status="PASS" starttime="20231102 21:51:53.141" endtime="20231102 21:51:56.713"/>
+</kw>
+<status status="PASS" starttime="20231102 21:51:53.141" endtime="20231102 21:51:56.713"/>
 </test>
-<status status="PASS" starttime="20231102 15:41:35.070" endtime="20231102 15:41:39.218"/>
+<status status="PASS" starttime="20231102 21:51:53.125" endtime="20231102 21:51:56.714"/>
 </suite>
 <statistics>
 <total>
