@@ -13,3 +13,6 @@ USER $USERNAME
 
 EXPOSE 3000
 CMD ["npm", "start", "jest"]
+
+# npm run start
+# npm run test

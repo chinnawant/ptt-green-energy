@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import React from 'react';
+
 import { Box, Button } from "@mui/material";
 import styled from '@emotion/styled'
 
@@ -15,7 +16,7 @@ interface DownloadButtonProps {
   onClick?: Function;
 }
 
-const DownloadButton: FC<DownloadButtonProps> = ({ href = '', imageDownload = '', id = "",onClick }) => {
+const DownloadButton: React.FC<DownloadButtonProps> = ({ href = '', imageDownload = '', id = "",onClick }) => {
   const _id = id ? id : Math.random().toString(36).substring(4);;
   return (
     <Box>
