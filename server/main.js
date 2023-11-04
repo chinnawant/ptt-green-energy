@@ -7,10 +7,11 @@ require("dotenv").config();
 
 app.disable("x-powered-by");
 
-
-const whitelist = process.env.WHITELISTED_DOMAINS.split(",")
+const envWhitelist = process.env.WHITELISTED_DOMAINS || "";
+const whitelist = envWhitelist.split(",")
   .filter(domain => {
     try {
+      console.log("dd",domain)
       new url.URL(domain);
       return true;
     } catch (_) {
@@ -30,10 +31,9 @@ const corsOptions = {
   },
   credentials: true,
 }
-app.use(cors(corsOptions))
 
-app.use(express.static(path.join(__dirname, "..", "build")));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "..", "build")),cors(corsOptions));
+app.use(express.static("public"),cors(corsOptions),cors(corsOptions));
 
 
 // start express server on port 5000
