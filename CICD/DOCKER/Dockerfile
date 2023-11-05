@@ -5,14 +5,19 @@ COPY package.json ./
 COPY ./ ./
 RUN npm i --force
 RUN apk upgrade libssl3 libcrypto3
-
+ENV  SKIP_PREFLIGHT_CHECK=true
+RUN npm run build
 ARG USERNAME=aztuser
 RUN adduser -D $USERNAME
 
+
+ENV NODE_ENV=${NODE_ENV}
 USER $USERNAME
 
-EXPOSE 3000
-CMD ["npm", "start", "jest"]
 
-# npm run start
-# npm run test
+EXPOSE 3000
+CMD ["npm", "run","server"]
+
+
+
+# docker run  -e WHITELISTED_DOMAINS='http://localhost:3000' -p 3000:3000  imagesName
