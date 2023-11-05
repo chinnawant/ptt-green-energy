@@ -10,10 +10,10 @@ image:
   pullPolicy: Always
 
 imagePullSecrets:
-- nexus-registry-prd
+- nexus-dgt-registry-prd
 
-nameOverride: project_group-project_name-prd
-fullnameOverride: project_group-project_name-prd
+nameOverride: do66004-gwe-fe-gwe-web-prd
+fullnameOverride: do66004-gwe-fe-gwe-web-prd
 
 env:
 - name: NODE_ENV
@@ -50,7 +50,7 @@ env:
 #       claimName: master-service-devops
 
 containerPorts:
-- 8080
+- 3000
 
 resources:
   requests:
@@ -71,23 +71,23 @@ service:
   type: ClusterIP
   annotation: {}
   ports:
-  - name: project_group-project_name-prd-svc
+  - name: do66004-gwe-fe-gwe-web-prd-svc
     protocol: TCP
     externalPort: 80
-    internalPort: 8080
+    internalPort: 3000
 
 route:
   enabled: true
   routes:
   - name: main
     spec:
-      host: project_group-project_name-prd.apps.ocpprd.pttdigital.com
+      host: do66004-gwe-fe-gwe-web-prd.apps.ocpprd.pttdigital.com
       to:
         kind: Service
-        name: project_group-project_name-prd
+        name: do66004-gwe-fe-gwe-web-prd
         weight: 100
       port:
-        targetPort: project_group-project_name-prd-svc
+        targetPort: do66004-gwe-fe-gwe-web-prd-svc
       wildcardPolicy: None
       tls:
         termination: edge
