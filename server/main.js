@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const url = require('url');
 const cors = require("cors");
 
 require("dotenv").config();
@@ -11,7 +12,6 @@ const envWhitelist = process.env.WHITELISTED_DOMAINS || "";
 const whitelist = envWhitelist.split(",")
   .filter(domain => {
     try {
-      console.log("dd",domain)
       new url.URL(domain);
       return true;
     } catch (_) {
