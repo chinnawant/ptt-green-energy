@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const url = require('url');
+const mime = require('mime-types');
 const cors = require("cors");
 
 require("dotenv").config();
@@ -36,6 +37,11 @@ const corsOptions = {
 app.use(function(req, res, next) {
   res.header("X-Frame-Options", "SAMEORIGIN");
   res.header("Cache-Control", "no-store");
+  const extension = path.extname(req.url);
+  const mimeType = mime.lookup(extension);
+  if (mimeType) {
+    res.header('Content-Type', mimeType);
+  }
   next();
 });
 
