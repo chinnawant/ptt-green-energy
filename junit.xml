@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="10" failures="0" errors="0" time="14.159">
-  <testsuite name="BannerContainer" errors="0" failures="0" skipped="0" timestamp="2023-11-02T15:22:21" time="7.398" tests="1">
-    <testcase classname="BannerContainer renders correctly with props" name="BannerContainer renders correctly with props" time="0.114">
+<testsuites name="jest tests" tests="10" failures="0" errors="0" time="74.922">
+  <testsuite name="BannerContainer" errors="0" failures="0" skipped="0" timestamp="2023-11-06T04:18:38" time="29.078" tests="1">
+    <testcase classname="BannerContainer renders correctly with props" name="BannerContainer renders correctly with props" time="0.215">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;Header&gt; Component" errors="0" failures="0" skipped="0" timestamp="2023-11-02T15:22:28" time="0.891" tests="2">
-    <testcase classname="&lt;Header&gt; Component renders not inject props" name="&lt;Header&gt; Component renders not inject props" time="0.054">
+  <testsuite name="&lt;Header&gt; Component" errors="0" failures="0" skipped="0" timestamp="2023-11-06T04:19:08" time="1.824" tests="2">
+    <testcase classname="&lt;Header&gt; Component renders not inject props" name="&lt;Header&gt; Component renders not inject props" time="0.065">
     </testcase>
-    <testcase classname="&lt;Header&gt; Component should render inject props" name="&lt;Header&gt; Component should render inject props" time="0.017">
-    </testcase>
-  </testsuite>
-  <testsuite name="App component" errors="0" failures="0" skipped="0" timestamp="2023-11-02T15:22:21" time="10.461" tests="1">
-    <testcase classname="App component renders App component without crashing" name="App component renders App component without crashing" time="0.294">
+    <testcase classname="&lt;Header&gt; Component should render inject props" name="&lt;Header&gt; Component should render inject props" time="0.02">
     </testcase>
   </testsuite>
-  <testsuite name="ControlPanel" errors="0" failures="0" skipped="0" timestamp="2023-11-02T15:22:21" time="11.243" tests="3">
-    <testcase classname="ControlPanel renders correctly with props input1" name="ControlPanel renders correctly with props input1" time="0.347">
+  <testsuite name="DownloadButton" errors="0" failures="0" skipped="0" timestamp="2023-11-06T04:18:38" time="59.431" tests="3">
+    <testcase classname="DownloadButton renders correctly with props input1" name="DownloadButton renders correctly with props input1" time="0.334">
     </testcase>
-    <testcase classname="ControlPanel renders correctly with props input2" name="ControlPanel renders correctly with props input2" time="0.081">
+    <testcase classname="DownloadButton renders correctly with props input2" name="DownloadButton renders correctly with props input2" time="0.083">
     </testcase>
-    <testcase classname="ControlPanel handles interactive select" name="ControlPanel handles interactive select" time="0.314">
+    <testcase classname="DownloadButton handles click event" name="DownloadButton handles click event" time="0.08">
     </testcase>
   </testsuite>
-  <testsuite name="DownloadButton" errors="0" failures="0" skipped="0" timestamp="2023-11-02T15:22:21" time="12.426" tests="3">
-    <testcase classname="DownloadButton renders correctly with props input1" name="DownloadButton renders correctly with props input1" time="0.178">
+  <testsuite name="App component" errors="0" failures="0" skipped="0" timestamp="2023-11-06T04:18:38" time="59.711" tests="1">
+    <testcase classname="App component renders App component without crashing" name="App component renders App component without crashing" time="0.315">
     </testcase>
-    <testcase classname="DownloadButton renders correctly with props input2" name="DownloadButton renders correctly with props input2" time="0.055">
+  </testsuite>
+  <testsuite name="ControlPanel" errors="0" failures="0" skipped="0" timestamp="2023-11-06T04:18:38" time="60.134" tests="3">
+    <testcase classname="ControlPanel renders correctly with props input1" name="ControlPanel renders correctly with props input1" time="0.422">
     </testcase>
-    <testcase classname="DownloadButton handles click event" name="DownloadButton handles click event" time="0.045">
+    <testcase classname="ControlPanel renders correctly with props input2" name="ControlPanel renders correctly with props input2" time="0.082">
+    </testcase>
+    <testcase classname="ControlPanel handles interactive select" name="ControlPanel handles interactive select" time="0.257">
     </testcase>
   </testsuite>
 </testsuites>
