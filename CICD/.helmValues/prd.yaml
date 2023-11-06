@@ -18,6 +18,8 @@ fullnameOverride: do66004-gwe-fe-gwe-web-prd
 env:
 - name: NODE_ENV
   value: production
+- name: WHITELISTED_DOMAINS 
+  value: https://do66004-gwe-fe-gwe-web-prd.apps.ocpprd.pttdigital.com
 #   - name: DB_USERNAME
 #     secret:
 #       name: master-service-devops

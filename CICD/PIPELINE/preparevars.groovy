@@ -33,7 +33,7 @@ def globalVariable(envName){
     env.image_regitry_server    = [ "acr": false, "nexus": true, "ecr": false, "gar": false, "gcr": false ]
 
     url_env_1 = "https://${project_group}-${project_name}-dev.apps.ocpdev.pttdigital.com"
-    url_env_2 = "https://${project_group}-${project_name}-sit.apps.ocpdev.pttdigital.com"
+    url_env_2 = "https://${project_group}-${project_name}-uat.apps.ocpdev.pttdigital.com"
     url_env_4 = "https://${project_group}-${project_name}-prd.apps.ocpprd.pttdigital.com"
     url_path_env_1 = "/" // edit # Path for health check dev
     url_path_env_3 = "/" // edit # Path for health check uat
