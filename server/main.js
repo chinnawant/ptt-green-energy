@@ -36,8 +36,7 @@ const corsOptions = {
 
 app.use(function(req, res, next) {
   res.header("X-Frame-Options", "SAMEORIGIN");
-  res.header("Cache-Control", "no-store");
-  res.removeHeader('Content-Security-Policy'); // Remove CSP header 
+  res.header("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate"); // Updated Cache-Control header
   const extension = path.extname(req.url);
   const mimeType = mime.lookup(extension);
   if (mimeType) {
