@@ -46,6 +46,10 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get("/static" ,(req, res, next) => {
+  res.status(400).send(Error404Messsage);
+});
+
 app.get("/static/js" ,(req, res, next) => {
   res.status(400).send(Error404Messsage);
 });
