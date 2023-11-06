@@ -8,6 +8,7 @@ require("dotenv").config();
 
 app.disable("x-powered-by");
 
+
 const envWhitelist = process.env.WHITELISTED_DOMAINS || "";
 const whitelist = envWhitelist.split(",")
   .filter(domain => {
@@ -31,6 +32,12 @@ const corsOptions = {
   },
   credentials: true,
 }
+
+app.use(function(req, res, next) {
+  res.header("X-Frame-Options", "SAMEORIGIN");
+  res.header("Cache-Control", "no-store");
+  next();
+});
 
 app.use(express.static(path.join(__dirname, "..", "build")),cors(corsOptions));
 app.use(express.static("public"),cors(corsOptions),cors(corsOptions));
