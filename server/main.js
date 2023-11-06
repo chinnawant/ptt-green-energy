@@ -8,6 +8,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 app.disable("x-powered-by");
+let Error404Messsage = "Your custom error message here";
 
 
 const envWhitelist = process.env.WHITELISTED_DOMAINS || "";
@@ -44,13 +45,17 @@ app.use(function(req, res, next) {
   }
   next();
 });
+app.use("/sitemap.xml" ,(req, res, next) => {
+    res.status(400).send(Error404Messsage);
+});
 
 app.use(express.static(path.join(__dirname, "..", "build")),cors(corsOptions));
 app.use(express.static("public"),cors(corsOptions),cors(corsOptions));
 
 app.use(function customErrorHandler(err, req, res, next) {
-   res.status(400).send('Your custom error message here');
+   res.status(400).send(Error404Messsage);
 });
+
 
 
 
