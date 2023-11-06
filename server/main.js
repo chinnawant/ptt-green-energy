@@ -45,6 +45,19 @@ app.use(function(req, res, next) {
   }
   next();
 });
+
+app.get("/static/js" ,(req, res, next) => {
+  res.status(400).send(Error404Messsage);
+});
+
+app.get("/static/css" ,(req, res, next) => {
+  res.status(400).send(Error404Messsage);
+});
+
+app.get("/static/media" ,(req, res, next) => {
+  res.status(400).send(Error404Messsage);
+});
+
 app.use("/sitemap.xml" ,(req, res, next) => {
     res.status(400).send(Error404Messsage);
 });
