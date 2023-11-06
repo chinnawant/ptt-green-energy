@@ -6,6 +6,7 @@ COPY ./ ./
 RUN npm i --force
 RUN apk upgrade libssl3 libcrypto3
 ENV  SKIP_PREFLIGHT_CHECK=true
+ENV  INLINE_RUNTIME_CHUNK=false
 RUN npm run build
 ARG USERNAME=aztuser
 RUN adduser -D $USERNAME
