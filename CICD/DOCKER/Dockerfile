@@ -3,6 +3,8 @@ WORKDIR /app
 COPY package.json ./
 # COPY package-lock.json ./
 COPY ./ ./
+
+RUN mv public/index-prod.html public/index.html
 RUN npm i --force
 RUN apk upgrade libssl3 libcrypto3
 ENV  SKIP_PREFLIGHT_CHECK=true
