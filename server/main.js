@@ -37,6 +37,7 @@ const corsOptions = {
 app.use(function(req, res, next) {
   res.header("X-Frame-Options", "SAMEORIGIN");
   res.header("Cache-Control", "no-store");
+  res.removeHeader('Content-Security-Policy'); // Remove CSP header 
   const extension = path.extname(req.url);
   const mimeType = mime.lookup(extension);
   if (mimeType) {
@@ -47,6 +48,12 @@ app.use(function(req, res, next) {
 
 app.use(express.static(path.join(__dirname, "..", "build")),cors(corsOptions));
 app.use(express.static("public"),cors(corsOptions),cors(corsOptions));
+
+app.use(function customErrorHandler(err, req, res, next) {
+   res.status(400).send('Your custom error message here');
+});
+
+
 
 
 // start express server on port 5000
