@@ -10,6 +10,10 @@ RUN apk upgrade libssl3 libcrypto3
 ENV  SKIP_PREFLIGHT_CHECK=true
 ENV  INLINE_RUNTIME_CHUNK=false
 RUN npm run build
+
+RUN npm i -f postcss@8.4.31 --prefix node_modules/resolve-url-loader/
+RUN cd /usr && npm i -g npm@9.8.1
+
 ARG USERNAME=aztuser
 RUN adduser -D $USERNAME
 
