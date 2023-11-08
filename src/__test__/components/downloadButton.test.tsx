@@ -50,7 +50,7 @@ it('handles click event', () => {
    const handleClick = jest.fn()
 
   const buttonHref = 'https://example.com';
-  const { getByRole } = render(<DownloadButton href={buttonHref} imageDownload={defaultProps1.imageDownload}  onClick={handleClick} />);
+  const { getByRole } = render(<DownloadButton href={buttonHref}  id="pdfPresentYear" imageDownload={defaultProps1.imageDownload}  onClick={handleClick} />);
   const button = getByRole('link');
   fireEvent.click(button);
 
