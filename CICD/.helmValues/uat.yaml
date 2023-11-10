@@ -19,7 +19,7 @@ env:
 - name: NODE_ENV
   value: uat
 - name: WHITELISTED_DOMAINS 
-  value: https://do66004-gwe-fe-gwe-web-uat.apps.ocpuat.pttdigital.com
+  value: https://do66004-gwe-fe-gwe-web-uat.apps.ocpdev.pttdigital.com
 #   - name: DB_USERNAME
 #     secret:
 #       name: master-service-devops
@@ -81,7 +81,7 @@ route:
   routes:
   - name: main
     spec:
-      host: do66004-gwe-fe-gwe-web-uat.apps.ocpuat.pttdigital.com
+      host: do66004-gwe-fe-gwe-web-uat.apps.ocpdev.pttdigital.com
       to:
         kind: Service
         name: do66004-gwe-fe-gwe-web-uat
