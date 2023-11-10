@@ -84,7 +84,7 @@ route:
   routes:
   - name: main
     spec:
-      host: do66004-gwe-fe-gwe-web-prd.apps.ocpprd.pttdigital.com
+      host: pttge.com
       to:
         kind: Service
         name: do66004-gwe-fe-gwe-web-prd
