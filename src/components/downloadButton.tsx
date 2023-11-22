@@ -28,7 +28,7 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ href = '', imageDownloa
         target='_blank'
         onClick={onClick as any}
       >
-        ดาวโหลด PDF
+        ดาวน์โหลด PDF
         <Box width={"20px"} height={"20px"}>
           <ImageDownload src={imageDownload} />
         </Box>

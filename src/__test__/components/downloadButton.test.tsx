@@ -21,7 +21,7 @@ describe('DownloadButton', () => {
     expect(screen.getByRole('link')).toHaveAttribute('href', defaultProps1.href);
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
 
-    expect(getByText('ดาวโหลด PDF')).toBeInTheDocument();
+    expect(getByText('ดาวน์โหลด PDF')).toBeInTheDocument();
   });
   
 
@@ -38,12 +38,12 @@ describe('DownloadButton', () => {
 
 
     expect(screen.getByRole('link')).toBeInTheDocument();
-    expect(screen.getByRole('link')).toHaveTextContent('ดาวโหลด PDF');
+    expect(screen.getByRole('link')).toHaveTextContent('ดาวน์โหลด PDF');
     expect(container.querySelector(`#${defaultProps2.id}`)).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveAttribute('href', defaultProps2.href);
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
 
-    expect(getByText('ดาวโหลด PDF')).toBeInTheDocument();
+    expect(getByText('ดาวน์โหลด PDF')).toBeInTheDocument();
   });
 
 it('handles click event', () => {
@@ -55,7 +55,7 @@ it('handles click event', () => {
   fireEvent.click(button);
 
   expect(screen.getByRole('link')).toBeInTheDocument();
-  expect(screen.getByRole('link')).toHaveTextContent('ดาวโหลด PDF');
+  expect(screen.getByRole('link')).toHaveTextContent('ดาวน์โหลด PDF');
   expect(screen.getByRole('link')).toHaveAttribute('href', defaultProps1.href);
   expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
 
