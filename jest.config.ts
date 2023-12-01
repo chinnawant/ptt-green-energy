@@ -5,7 +5,7 @@
 
 export default {
   collectCoverage: true,
-  coverageDirectory: "./TestResults",
+  coverageDirectory: "./coverage",
   clearMocks: true,
   reporters: [
     "default",
@@ -13,7 +13,7 @@ export default {
       "jest-junit",
       {
         suiteName: "jest tests",
-        outputDirectory: "./TestResults/Junit",
+        outputDirectory: "./coverage/Junit",
         outputName: "junit.xml",
       },
     ],
@@ -26,7 +26,7 @@ export default {
     [
       "jest-html-reporters",
       {
-        publicPath: "./TestResults/html-report",
+        publicPath: "./coverage/html-report",
         filename: "report.html",
         openReport: true,
       },
