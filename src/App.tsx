@@ -49,7 +49,7 @@ function App() {
         <Banner image={ImagfinancialReporting}/>
         <Container>
           <Box display={"flex"} justifyContent={"center"} padding={"24px"}>
-            <TextSection>งบการเงินล่าสุด</TextSection>
+            <TextSection>แผนการจัดหาล่าสุด</TextSection>
           </Box>
           <ControlPanel image={ImgFinancial} defalutValue={year} dropdown={storeData} presentYear={StorePdf['P2565']}  selectedPDF={pdf}  handleChange={setYear}  />
         </Container>
