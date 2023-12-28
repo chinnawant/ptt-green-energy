@@ -29,12 +29,12 @@ Test in Mobile device Mobile and Click Select and Download
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2565
 
     Click Element    id:select-year
-    Click Element    select-year-option-2564
-    Verify Element Text     select-year    2564
+    Click Element    select-year-option-2565
+    Verify Element Text     select-year    2565
     
     Click Element    id:select-year
-    Click Element    select-year-option-2563
-    Verify Element Text     select-year    2563
+    Click Element    select-year-option-2565
+    Verify Element Text     select-year    2565
 
     Click Element    id:pdfSelected
     Capture Page Screenshot
@@ -68,12 +68,12 @@ Test in Mobile device Tablet and Click Select and Download
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2565
 
     Click Element    id:select-year
-    Click Element    select-year-option-2564
-    Verify Element Text     select-year    2564
+    Click Element    select-year-option-2565
+    Verify Element Text     select-year    2565
     
     Click Element    id:select-year
-    Click Element    select-year-option-2563
-    Verify Element Text     select-year    2563
+    Click Element    select-year-option-2565
+    Verify Element Text     select-year    2565
 
     Click Element    id:pdfSelected
     Capture Page Screenshot
@@ -107,12 +107,12 @@ Test in Mobile device Desktop and Click Select and Download
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2565
 
     Click Element    id:select-year
-    Click Element    select-year-option-2564
-    Verify Element Text     select-year    2564
+    Click Element    select-year-option-2565
+    Verify Element Text     select-year    2565
     
     Click Element    id:select-year
-    Click Element    select-year-option-2563
-    Verify Element Text     select-year    2563
+    Click Element    select-year-option-2565
+    Verify Element Text     select-year    2565    
 
     Click Element    id:pdfSelected
     Capture Page Screenshot

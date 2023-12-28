@@ -3,7 +3,6 @@ import express from 'express';
 import app from '../../server/main.js';
 
 
-// import app from '
 
 describe('Middleware headers', () => {
   test('should set X-Frame-Options header', async () => {
