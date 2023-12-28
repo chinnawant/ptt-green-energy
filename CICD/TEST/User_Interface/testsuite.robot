@@ -6,7 +6,7 @@ Resource    variables.robot
 *** Test Cases ***
 Test in Mobile device Mobile
     Open Website in Size    375    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
     Check New Tab Has PDF    pdfPresentYear
     Capture Page Screenshot
@@ -15,7 +15,7 @@ Test in Mobile device Mobile
 *** Test Cases ***
 Test in Mobile device Mobile and Click pdfPresentYear
     Open Website in Size    375    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
     Check New Tab Has PDF    pdfPresentYear
     Capture Page Screenshot
@@ -25,7 +25,7 @@ Test in Mobile device Mobile and Click pdfPresentYear
 *** Test Cases ***
 Test in Mobile device Mobile and Click Select and Download
     Open Website in Size    375    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
 
     Click Element    id:select-year
@@ -45,7 +45,7 @@ Test in Mobile device Mobile and Click Select and Download
 *** Test Cases ***
 Test in Mobile device Tablet
     Open Website in Size    768    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
     Check New Tab Has PDF    pdfPresentYear
     Capture Page Screenshot
@@ -54,7 +54,7 @@ Test in Mobile device Tablet
 *** Test Cases ***
 Test in Mobile device Tablet and Click pdfPresentYear
     Open Website in Size    768    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
     Check New Tab Has PDF    pdfPresentYear
     Capture Page Screenshot
@@ -64,7 +64,7 @@ Test in Mobile device Tablet and Click pdfPresentYear
 *** Test Cases ***
 Test in Mobile device Tablet and Click Select and Download
     Open Website in Size    768    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
 
     Click Element    id:select-year
@@ -84,7 +84,7 @@ Test in Mobile device Tablet and Click Select and Download
 *** Test Cases ***
 Test in Mobile device Desktop
     Open Website in Size    1200    1023
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
     Check New Tab Has PDF    pdfPresentYear
     Capture Page Screenshot
@@ -93,7 +93,7 @@ Test in Mobile device Desktop
 *** Test Cases ***
 Test in Mobile device Desktop and Click pdfPresentYear
     Open Website in Size    1200    1023
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
     Check New Tab Has PDF    pdfPresentYear
     Capture Page Screenshot
@@ -103,7 +103,7 @@ Test in Mobile device Desktop and Click pdfPresentYear
 *** Test Cases ***
 Test in Mobile device Desktop and Click Select and Download
     Open Website in Size    1200    1023
-    Verify Element Text    root>div>div>div>div    แผนการจัดหาล่าสุด
+    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
     Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดหาประจำปี 2564
 
     Click Element    id:select-year

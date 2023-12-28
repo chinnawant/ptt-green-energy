@@ -14,11 +14,12 @@ interface DownloadButtonProps {
   imageDownload: string;
   id: string,
   onClick?: Function;
+  boxStyle?: React.CSSProperties;
 }
 
-const DownloadButton: React.FC<DownloadButtonProps> = ({ href = '', imageDownload = '', id = "",onClick }) => {
+const DownloadButton: React.FC<DownloadButtonProps> = ({ href = '', imageDownload = '', id = "", onClick, boxStyle }) => {
   return (
-    <Box>
+    <Box style={boxStyle} >
       <Button 
         id={id}
         variant="contained" 

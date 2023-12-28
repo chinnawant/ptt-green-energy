@@ -101,15 +101,14 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, d
           style={{backgroundImage:"linear-gradient(to top left, #257CB2 0 50%, transparent 50% 100%), linear-gradient(to top right, #257CB2 0 100%, transparent 50% 100%), linear-gradient(#257CB2 0 100%)",backgroundSize:"21% 100%, 21% 100%, 59% 100%",backgroundPosition:"left top, right top, center top",backgroundRepeat: "no-repeat"}}  
         >
         
-          <Box style={{display:"flex",justifyContent:"center",flexDirection:"column",height:"100%",alignItems:"center"}}>
+          <Box style={{display:"flex",justifyContent:"center",flexDirection:"column",height:"100%",alignItems:"center", paddingLeft:"15px" }}>
             <Box>
-              <Box width={"30px"} height={"30px"} sx={{...matchesSM && { display: "none" }}}>
+              <Box marginLeft={"20px"} width={"30px"} height={"30px"} sx={{...matchesSM && { display: "none" }}}>
                 <ImageDownload  src={imageChartup}  />
               </Box>
-            <Box padding={"10px 0 10px 0"} fontSize={"1.4rem"} sx={{...matchesMD && { fontSize: "1.8rem"}}}  color={"white"}>แผนการจัดหาประจำปี 2564</Box>
-                <DownloadButton id="pdfPresentYear" href={presentYear} imageDownload={imageDownload} />
-                
-            </Box>
+             <Box   padding={"10px 0 10px 0"} fontSize={"1.2rem"} sx={{...matchesMD && { fontSize: "1.8rem"}}}  color={"white"}>แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567</Box>
+                <DownloadButton boxStyle={{display:"flex",justifyContent:"center"}} id="pdfPresentYear" href={presentYear} imageDownload={imageDownload} />
+              </Box>
           </Box>
         </BoxContrlller>
       </ControlPanelFrame>
