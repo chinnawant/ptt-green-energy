@@ -73,11 +73,9 @@ app.use(function customErrorHandler(err, req, res, next) {
    res.status(400).send(Error404Messsage);
 });
 
-
-
-
-
 // start express server on port 5000
 app.listen(3000, () => {
   console.log("server started on port 3000");
 });
+
+module.exports = app;
