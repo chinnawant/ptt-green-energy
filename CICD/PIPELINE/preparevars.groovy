@@ -34,7 +34,7 @@ def globalVariable(envName){
 
     url_env_1 = "https://${project_group}-${project_name}-dev.apps.ocpdev.pttdigital.com"
     url_env_3 = "https://${project_group}-${project_name}-uat.apps.ocpdev.pttdigital.com"
-    url_env_4 = "https://${project_group}-${project_name}-prd.apps.ocpprd.pttdigital.com"
+    url_env_4 = "www.pttge.com"
     url_path_env_1 = "/" // edit # Path for health check dev
     url_path_env_3 = "/" // edit # Path for health check uat
     url_path_env_4 = "/" // edit # Path for health check prd
