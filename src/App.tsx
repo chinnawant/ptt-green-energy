@@ -14,20 +14,21 @@ import ImagfinancialReporting from './assets/images/financial-reporting.jpg';
 import ImgFinancial from './assets/images/financial-statement.jpg';
 
 // future import it to dynamic
-import P2565 from './assets/pdfs/2565.pdf';
+// why import 2564 because it can import 2564 it error
+import P2564 from './assets/pdfs/2564.pdf';
 
 
 
 
 function App() {
-  const storeData = ["2565"];
-  const StorePdf: any = { P2565 }
-  const [year,setYear] = useState("2565");
-  const [pdf,setPdf] = useState(StorePdf.P2564);
+  const storeData = ["2564"];
+  const storePdf: any = { P2564 }
+  const [year,setYear] = useState(storeData[0]);
+  const [pdf,setPdf] = useState(storePdf[storeData[0]]);
 
   
   useEffect(() => {
-    setPdf(StorePdf['P'+year]);
+    setPdf(storePdf['P'+year]);
   }
   , [year]);
   
@@ -46,7 +47,7 @@ function App() {
           <Box display={"flex"} justifyContent={"center"} padding={"24px"}>
             <TextSection>แผนการจัดหาล่าสุด</TextSection>
           </Box>
-          <ControlPanel image={ImgFinancial} defalutValue={year} dropdown={storeData} presentYear={StorePdf['P2565']}  selectedPDF={pdf}  handleChange={setYear}  />
+          <ControlPanel image={ImgFinancial} defalutValue={year} dropdown={storeData} presentYear={storePdf[`P${storeData[0]}`]}  selectedPDF={pdf}  handleChange={setYear}  />
         </Container>
       </Box>
     </>

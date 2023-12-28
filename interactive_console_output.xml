@@ -16,7 +16,7 @@
 </kw>
 <kw name="Verify Element Text">
 <arg>root&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div:nth-child(2)</arg>
-<arg>งบการเงินประจำปี 2565</arg>
+<arg>งบการเงินประจำปี 2564</arg>
 <status status="NOT RUN" starttime="20231102 21:51:53.626" endtime="20231102 21:51:53.626"/>
 </kw>
 <kw name="Check New Tab Has PDF">

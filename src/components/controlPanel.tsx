@@ -106,7 +106,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({ image = "", handleChange, d
               <Box width={"30px"} height={"30px"} sx={{...matchesSM && { display: "none" }}}>
                 <ImageDownload  src={imageChartup}  />
               </Box>
-            <Box padding={"10px 0 10px 0"} fontSize={"1.4rem"} sx={{...matchesMD && { fontSize: "1.8rem"}}}  color={"white"}>แผนการจัดหาประจำปี 2565</Box>
+            <Box padding={"10px 0 10px 0"} fontSize={"1.4rem"} sx={{...matchesMD && { fontSize: "1.8rem"}}}  color={"white"}>แผนการจัดหาประจำปี 2564</Box>
                 <DownloadButton id="pdfPresentYear" href={presentYear} imageDownload={imageDownload} />
                 
             </Box>
