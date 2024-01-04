@@ -1,6 +1,6 @@
 import request from 'supertest';
 import express from 'express';
-import app from '../../server/main.js';
+import { app, corsOptions } from '../../server/main.js';
 
 
 
@@ -51,5 +51,35 @@ describe("GET /sitemap.xml", () => {
     const response = await request(app).get("/sitemap.xml");
     expect(response.statusCode).toBe(400);
     expect(response.text).toBe("Your custom error message here");
+  });
+});
+
+
+
+describe('CORS options', () => {
+  test('allows requests from whitelisted domains', () => {
+    const callback = jest.fn();
+    const testOrigin = "http://localhost:3000"; // assuming your whitelist is not empty
+
+    corsOptions.origin(testOrigin, callback);
+
+    expect(callback).toHaveBeenC
+  });
+
+  test('disallows requests from non-whitelisted domains', () => {
+    const callback = jest.fn();
+    const testOrigin = 'http://not-whitelisted.com';
+
+    corsOptions.origin(testOrigin, callback);
+
+    expect(callback).toHaveBeenCalledWith(new Error('Not allowed by CORS'));
+  });
+
+  test('allows requests with no origin', () => {
+    const callback = jest.fn();
+
+    corsOptions.origin(null, callback);
+
+    expect(callback).toHaveBeenCalledWith(null, true);
   });
 });

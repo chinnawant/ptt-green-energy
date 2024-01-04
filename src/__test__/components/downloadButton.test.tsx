@@ -5,6 +5,7 @@ describe('DownloadButton', () => {
   const defaultProps1 = {
     href: 'https://example.com',
     imageDownload: 'https://example.com/image.png',
+    name: 'ดาวน์โหลด PDF',
     id: 'xxx',
   };
 
@@ -26,9 +27,10 @@ describe('DownloadButton', () => {
   
 
   it('renders correctly with props input2', () => {
-      const defaultProps2 = {
+  const defaultProps2 = {
     href: 'https://google.com',
     imageDownload: 'https://google.com/image.png',
+    name: 'ดาวน์โหลด PDF',
     id: 'yyy',
   };
     const { getByText, container } = render(<DownloadButton {...defaultProps2} />);
@@ -50,7 +52,7 @@ it('handles click event', () => {
    const handleClick = jest.fn()
 
   const buttonHref = 'https://example.com';
-  const { getByRole } = render(<DownloadButton href={buttonHref}  id="pdfPresentYear" imageDownload={defaultProps1.imageDownload}  onClick={handleClick} />);
+  const { getByRole } = render(<DownloadButton href={buttonHref}  id="pdfPresentYear" imageDownload={defaultProps1.imageDownload} name='ดาวน์โหลด PDF'  onClick={handleClick} />);
   const button = getByRole('link');
   fireEvent.click(button);
 

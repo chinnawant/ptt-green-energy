@@ -21,16 +21,9 @@ import P2567 from './assets/pdfs/2567.pdf';
 
 
 function App() {
-  const storeData = ["2567"];
-  const storePdf: any = { P2567 }
-  const [year,setYear] = useState(storeData[0]);
-  const [pdf,setPdf] = useState(storePdf[storeData[0]]);
-
-  
-  useEffect(() => {
-    setPdf(storePdf['P'+year]);
-  }
-  , [year]);
+  const storePdf = [
+  { pdf: P2567, name: "เอกสารเผยแพร่ ประจำปีงบประมาณ 2567"},
+  { pdf: P2567, name: "เอกสารเผยแพร่ ประจำปีงบประมาณ 2566"},]
   
   const TextSection = styled.div`
     font-size: 1.8rem;
@@ -45,9 +38,9 @@ function App() {
         <Banner image={ImagfinancialReporting}/>
         <Container>
           <Box display={"flex"} justifyContent={"center"} padding={"24px"}>
-            <TextSection>แผนการจัดซื้อจัดจ้าง</TextSection>
+            <TextSection>เอกสารเผยแพร่</TextSection>
           </Box>
-          <ControlPanel image={ImgFinancial} defalutValue={year} dropdown={storeData} presentYear={storePdf[`P${storeData[0]}`]}  selectedPDF={pdf}  handleChange={setYear}  />
+          <ControlPanel image={ImgFinancial} storePdf={storePdf}  />
         </Container>
       </Box>
     </>

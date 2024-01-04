@@ -6,117 +6,49 @@ Resource    variables.robot
 *** Test Cases ***
 Test in Mobile device Mobile
     Open Website in Size    375    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
-    Check New Tab Has PDF    pdfPresentYear
+    Verify Element Text    root>div>div>div>div    เอกสารเผยแพร่
+    Check New Tab Has PDF    pdfSelected-0
+    Verify Element Text   pdfSelected-0    เอกสารเผยแพร่ ประจำปีงบประมาณ 2567
+
+    Check New Tab Has PDF    pdfSelected-1
+    Verify Element Text   pdfSelected-1    เอกสารเผยแพร่ ประจำปีงบประมาณ 2566
     Capture Page Screenshot
     Close Window
 
-*** Test Cases ***
-Test in Mobile device Mobile and Click pdfPresentYear
-    Open Website in Size    375    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
-    Check New Tab Has PDF    pdfPresentYear
-    Capture Page Screenshot
-    Close Window
-
-
-*** Test Cases ***
-Test in Mobile device Mobile and Click Select and Download
-    Open Website in Size    375    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
-
-    Click Element    id:select-year
-    Click Element    select-year-option-2567
-    Verify Element Text     select-year    2567
-    
-    Click Element    id:select-year
-    Click Element    select-year-option-2567
-    Verify Element Text     select-year    2567
-
-    Click Element    id:pdfSelected
-    Capture Page Screenshot
-    Close Window
 
 
 
 *** Test Cases ***
 Test in Mobile device Tablet
     Open Website in Size    768    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
-    Check New Tab Has PDF    pdfPresentYear
+    Verify Element Text    root>div>div>div>div    เอกสารเผยแพร่
+    Check New Tab Has PDF    pdfSelected-0
+    Verify Element Text   pdfSelected-0    เอกสารเผยแพร่ ประจำปีงบประมาณ 2567
+
+    Check New Tab Has PDF    pdfSelected-1
+    Verify Element Text   pdfSelected-1    เอกสารเผยแพร่ ประจำปีงบประมาณ 2566
+    Capture Page Screenshot
     Capture Page Screenshot
     Close Window
 
-*** Test Cases ***
-Test in Mobile device Tablet and Click pdfPresentYear
-    Open Website in Size    768    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
-    Check New Tab Has PDF    pdfPresentYear
-    Capture Page Screenshot
-    Close Window
-
-
-*** Test Cases ***
-Test in Mobile device Tablet and Click Select and Download
-    Open Website in Size    768    812
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
-
-    Click Element    id:select-year
-    Click Element    select-year-option-2567
-    Verify Element Text     select-year    2567
-    
-    Click Element    id:select-year
-    Click Element    select-year-option-2567
-    Verify Element Text     select-year    2567
-
-    Click Element    id:pdfSelected
-    Capture Page Screenshot
-    Close Window
 
 
 
 *** Test Cases ***
 Test in Mobile device Desktop
     Open Website in Size    1200    1023
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
-    Check New Tab Has PDF    pdfPresentYear
-    Capture Page Screenshot
-    Close Window
+    Verify Element Text    root>div>div>div>div    เอกสารเผยแพร่
+    Check New Tab Has PDF    pdfSelected-0
+    Verify Element Text   pdfSelected-0    เอกสารเผยแพร่ ประจำปีงบประมาณ 2567
 
-*** Test Cases ***
-Test in Mobile device Desktop and Click pdfPresentYear
-    Open Website in Size    1200    1023
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
-    Check New Tab Has PDF    pdfPresentYear
+    Check New Tab Has PDF    pdfSelected-1
+    Verify Element Text   pdfSelected-1    เอกสารเผยแพร่ ประจำปีงบประมาณ 2566
+    Capture Page Screenshot
     Capture Page Screenshot
     Close Window
 
 
-*** Test Cases ***
-Test in Mobile device Desktop and Click Select and Download
-    Open Website in Size    1200    1023
-    Verify Element Text    root>div>div>div>div    แผนการจัดซื้อจัดจ้าง
-    Verify Element Text    root>div>div>div>div>div>div>div>div:nth-child(2)    แผนการจัดซื้อจัดจ้าง ประจำปีงบประมาณ 2567
 
-    Click Element    id:select-year
-    Click Element    select-year-option-2567
-    Verify Element Text     select-year    2567
-    
-    Click Element    id:select-year
-    Click Element    select-year-option-2567
-    Verify Element Text     select-year    2567    
-
-    Click Element    id:pdfSelected
-    Capture Page Screenshot
-    Close Window
 
 
 *** Keywords ***
